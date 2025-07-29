@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: telegram-bot-activity
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    autoDeploy: false
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.13
